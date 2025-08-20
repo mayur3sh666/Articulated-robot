@@ -1,0 +1,85 @@
+%% adjust angles according to your robot
+
+
+#include <Servo.h>
+
+const int numJoints = 5;
+Servo joints[numJoints];
+Servo gripper;
+
+int jointPins[numJoints] = {3, 5, 6, 9, 10};  // Base to wrist
+int gripperPin = 11;
+
+// Store current angles for each joint
+int currentAngles[numJoints] = {90, 90, 90, 90, 90};  // Start from neutral
+
+// Define multiple positions: [base, shoulder, elbow, wrist, wristRotate]
+int pickPosition[] = {60, 80, 170, 100, 90};
+int placePosition[] = {120, 50, 130, 80, 90};
+int homePosition[] = {50, 60, 120, 90, 90};
+
+// Gripper angles
+int gripperOpen = 20;
+int gripperClosed = 120;
+
+void setup() {
+  // Attach servos
+  for (int i = 0; i < numJoints; i++) {
+    joints[i].attach(jointPins[i]);
+    joints[i].write(currentAngles[i]);
+  }
+  gripper.attach(gripperPin);
+  gripper.write(gripperOpen);  // Start with open gripper
+  delay(1000);
+
+  // Begin sequence
+  pickAndPlace();
+}
+
+void loop() {
+  // Repeat the pick-and-place task every 5 seconds
+  delay(2000);
+  pickAndPlace();
+}
+
+// Smoothly move all joints to target angles
+void smoothMoveAll(int target[], int stepDelay) {
+  bool moving = true;
+
+  while (moving) {
+    moving = false;
+    for (int i = 0; i < numJoints; i++) {
+      if (currentAngles[i] < target[i]) {
+        currentAngles[i]++;
+        joints[i].write(currentAngles[i]);
+        moving = true;
+      } else if (currentAngles[i] > target[i]) {
+        currentAngles[i]--;
+        joints[i].write(currentAngles[i]);
+        moving = true;
+      }
+    }
+    delay(stepDelay);  // Smoothness control
+  }
+}
+
+// Pick and place sequence
+void pickAndPlace() {
+  smoothMoveAll(pickPosition, 10);
+  delay(1000);
+
+  // Close gripper to pick
+  gripper.write(gripperClosed);
+  delay(800);
+
+  // Move to place position
+  smoothMoveAll(placePosition, 10);
+  delay(500);
+
+  // Open gripper to release
+  gripper.write(gripperOpen);
+  delay(800);
+
+  // Return to home
+  smoothMoveAll(homePosition, 10);
+}
