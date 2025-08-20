@@ -1,0 +1,197 @@
+<?xml version='1.0' encoding='utf-8'?>
+<robot name="assemblyrobot">
+    <link name="arduino-base">
+        <inertial>
+            <origin xyz="-5.908176095655564e-05 0.012600108338098034 1.725580498494947e-05" rpy="0.0 0.0 0.0" />
+            <mass value="1.7495577812065652" />
+            <inertia ixx="0.0039417183917980474" iyy="0.007486009690572093" izz="0.003957126497272616" ixy="4.140320170639071e-07" iyz="1.8222252268676652e-07" ixz="-1.1160722562068011e-06" />
+        </inertial>
+        <visual name="arduino-base_visual">
+            <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0" />
+            <geometry>
+                <mesh filename="meshes/arduino-base.stl" scale="0.001 0.001 0.001" />
+            </geometry>
+        </visual>
+        <collision name="arduino-base_collision">
+            <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0" />
+            <geometry>
+                <mesh filename="meshes/arduino-base.stl" scale="0.001 0.001 0.001" />
+            </geometry>
+        </collision>
+    </link>
+    <link name="arm-2">
+        <inertial>
+            <origin xyz="0.045133587515917305 0.013747053811035208 0.06280542759050099" rpy="0.0 -0.0 0.0" />
+            <mass value="1.8987166737101113" />
+            <inertia ixx="0.0023033943445161104" iyy="0.0038036079862399375" izz="0.002076290476983168" ixy="-0.0005036707288676463" iyz="-0.0004484869326471805" ixz="-0.0014724481701302115" />
+        </inertial>
+        <visual name="arm-2_visual">
+            <origin xyz="7.490552671322721e-12 1.4882293410580383e-10 -0.10499999999999998" rpy="1.5707963267948937 2.6302735272498705e-15 1.5205098357985822" />
+            <geometry>
+                <mesh filename="meshes/arm-2.stl" scale="0.001 0.001 0.001" />
+            </geometry>
+        </visual>
+        <collision name="arm-2_collision">
+            <origin xyz="7.490552671322721e-12 1.4882293410580383e-10 -0.10499999999999998" rpy="1.5707963267948937 2.6302735272498705e-15 1.5205098357985822" />
+            <geometry>
+                <mesh filename="meshes/arm-2.stl" scale="0.001 0.001 0.001" />
+            </geometry>
+        </collision>
+    </link>
+    <link name="link1">
+        <inertial>
+            <origin xyz="-0.015062367690629089 -0.05281574228373373 -0.02688632089139279" rpy="-1.6543612251060553e-24 5.551115123125783e-17 -6.617444900424222e-24" />
+            <mass value="1.892393536013539" />
+            <inertia ixx="0.005713109719530485" iyy="0.0015877411130157991" izz="0.0044531045083366074" ixy="-0.00011387660998000642" iyz="-0.0020553273675931057" ixz="-6.904039229656939e-05" />
+        </inertial>
+        <visual name="link1_visual">
+            <origin xyz="0.04269795795658359 -0.020487590816886902 0.19186157078759858" rpy="-1.76389072849859 0.12238603032276264 0.3397011941680077" />
+            <geometry>
+                <mesh filename="meshes/link1.stl" scale="0.001 0.001 0.001" />
+            </geometry>
+        </visual>
+        <collision name="link1_collision">
+            <origin xyz="0.04269795795658359 -0.020487590816886902 0.19186157078759858" rpy="-1.76389072849859 0.12238603032276264 0.3397011941680077" />
+            <geometry>
+                <mesh filename="meshes/link1.stl" scale="0.001 0.001 0.001" />
+            </geometry>
+        </collision>
+    </link>
+    <link name="link2">
+        <inertial>
+            <origin xyz="0.01929866194100615 0.0024847349070673277 0.05280460015744328" rpy="0.0 -0.0 -1.5407439555097883e-33" />
+            <mass value="1.574222345529243" />
+            <inertia ixx="0.004004340198137724" iyy="0.003795991909373817" izz="0.00038965016051672975" ixy="5.034014142131925e-06" iyz="-0.00012512596047734216" ixz="0.00015032647625804938" />
+        </inertial>
+        <visual name="link2_visual">
+            <origin xyz="0.03495575394238399 1.020422111253083e-09 0.0017592814441363203" rpy="-2.5208825026752644 -1.5089653423310556 2.5199772747342872" />
+            <geometry>
+                <mesh filename="meshes/link2.stl" scale="0.001 0.001 0.001" />
+            </geometry>
+        </visual>
+        <collision name="link2_collision">
+            <origin xyz="0.03495575394238399 1.020422111253083e-09 0.0017592814441363203" rpy="-2.5208825026752644 -1.5089653423310556 2.5199772747342872" />
+            <geometry>
+                <mesh filename="meshes/link2.stl" scale="0.001 0.001 0.001" />
+            </geometry>
+        </collision>
+    </link>
+    <link name="Component47">
+        <inertial>
+            <origin xyz="1.740676331585357e-17 7.11823707445522e-33 0.030000000000000044" rpy="0.0 -0.0 0.0" />
+            <mass value="8.323257036604458" />
+            <inertia ixx="0.014201557318705767" iyy="0.014201557318706516" izz="0.02340916041544966" ixy="-8.656316956781306e-18" iyz="7.051171440193881e-18" ixz="6.547911532059208e-17" />
+        </inertial>
+        <visual name="Component47_visual">
+            <origin xyz="-2.6645352591003756e-17 0.0 6.217248937900877e-17" rpy="1.570796326794897 -1.7208456881689952e-15 0.0" />
+            <geometry>
+                <mesh filename="meshes/Component47.stl" scale="0.001 0.001 0.001" />
+            </geometry>
+        </visual>
+        <collision name="Component47_collision">
+            <origin xyz="-2.6645352591003756e-17 0.0 6.217248937900877e-17" rpy="1.570796326794897 -1.7208456881689952e-15 0.0" />
+            <geometry>
+                <mesh filename="meshes/Component47.stl" scale="0.001 0.001 0.001" />
+            </geometry>
+        </collision>
+    </link>
+    <link name="GRIP1">
+        <inertial>
+            <origin xyz="0.03238696951852166 0.026111590297341003 0.011291691799990247" rpy="0.0 -0.0 0.0" />
+            <mass value="0.05544632258846031" />
+            <inertia ixx="9.111720971360752e-06" iyy="3.388992109230535e-05" izz="4.187004161008024e-05" ixy="-1.3509250468996328e-05" iyz="-7.013677073715826e-07" ixz="-1.461657824731663e-06" />
+        </inertial>
+        <visual name="GRIP1_visual">
+            <origin xyz="0.0027145033433928134 -0.004255325966992168 0.005052093371296564" rpy="1.566880919443248 -0.035778539477757075 0.4046835680667616" />
+            <geometry>
+                <mesh filename="meshes/GRIP1.stl" scale="0.001 0.001 0.001" />
+            </geometry>
+        </visual>
+        <collision name="GRIP1_collision">
+            <origin xyz="0.0027145033433928134 -0.004255325966992168 0.005052093371296564" rpy="1.566880919443248 -0.035778539477757075 0.4046835680667616" />
+            <geometry>
+                <mesh filename="meshes/GRIP1.stl" scale="0.001 0.001 0.001" />
+            </geometry>
+        </collision>
+    </link>
+    <link name="BASE-GRIP">
+        <inertial>
+            <origin xyz="-0.0009488190672319519 -0.005604729281325778 -0.005003056961475423" rpy="0.0 -0.0 0.0" />
+            <mass value="0.09591779614717401" />
+            <inertia ixx="1.96043850413212e-05" iyy="7.175899486355081e-06" izz="2.5168438374898787e-05" ixy="-4.171244182649223e-06" iyz="-4.443683396075677e-08" ixz="1.513841088795708e-07" />
+        </inertial>
+        <visual name="BASE-GRIP_visual">
+            <origin xyz="-0.0008028777019686829 -0.0056607973419297245 -3.1738481569050235e-05" rpy="-1.5707963086406642 0.035992051342204255 -0.2956586612370818" />
+            <geometry>
+                <mesh filename="meshes/BASE-GRIP.stl" scale="0.001 0.001 0.001" />
+            </geometry>
+        </visual>
+        <collision name="BASE-GRIP_collision">
+            <origin xyz="-0.0008028777019686829 -0.0056607973419297245 -3.1738481569050235e-05" rpy="-1.5707963086406642 0.035992051342204255 -0.2956586612370818" />
+            <geometry>
+                <mesh filename="meshes/BASE-GRIP.stl" scale="0.001 0.001 0.001" />
+            </geometry>
+        </collision>
+    </link>
+    <link name="GRIP2">
+        <inertial>
+            <origin xyz="0.03718970221162657 -0.016754633525186843 0.011007389261286492" rpy="0.0 -0.0 0.0" />
+            <mass value="0.055446322588460384" />
+            <inertia ixx="3.924632716025174e-06" iyy="3.9008431290498205e-05" izz="4.1824079683841324e-05" ixy="5.218844768003791e-06" iyz="2.459571075229653e-07" ixz="-1.469646846665243e-06" />
+        </inertial>
+        <visual name="GRIP2_visual">
+            <origin xyz="0.00012062858434774171 0.00455392877980862 0.01506164950586026" rpy="-1.555777311788317 -0.0327098976440896 -0.1348806473247097" />
+            <geometry>
+                <mesh filename="meshes/GRIP2.stl" scale="0.001 0.001 0.001" />
+            </geometry>
+        </visual>
+        <collision name="GRIP2_collision">
+            <origin xyz="0.00012062858434774171 0.00455392877980862 0.01506164950586026" rpy="-1.555777311788317 -0.0327098976440896 -0.1348806473247097" />
+            <geometry>
+                <mesh filename="meshes/GRIP2.stl" scale="0.001 0.001 0.001" />
+            </geometry>
+        </collision>
+    </link>
+    <joint name="arm-2_Revolute-4" type="continuous">
+        <origin xyz="0.07118627 0.00600197 0.08652698999999998" rpy="-1.5707963405551209 -3.817616922987956e-08 1.916741505630135" />
+        <parent link="arm-2" />
+        <child link="link1" />
+        <axis xyz="-0.9987354911119987 -3.881955520057755e-08 0.050265174756219055" />
+    </joint>
+    <joint name="link1_Revolute-6" type="continuous">
+        <origin xyz="-0.01078426676849794 -0.10634598965323648 -0.05512014847774532" rpy="-3.141592639829569 -1.2303490948273323e-08 3.8176169047525154e-08" />
+        <parent link="link1" />
+        <child link="link2" />
+        <axis xyz="0.9987354904935623 -2.6551261189666774e-17 0.05026518704415206" />
+    </joint>
+    <joint name="arduino-base_Rigid-10" type="fixed">
+        <origin xyz="0.0 0.033 0.0" rpy="-1.5707963267948966 -0.0 0.0" />
+        <parent link="arduino-base" />
+        <child link="Component47" />
+    </joint>
+    <joint name="Component47_Revolute-11" type="continuous">
+        <origin xyz="0.0 0.0 0.06000000000000001" rpy="0.0 -0.0 7.778769097326427e-62" />
+        <parent link="Component47" />
+        <child link="arm-2" />
+        <axis xyz="0.0 0.0 1.0" />
+    </joint>
+    <joint name="BASE-GRIP_Revolute-12" type="revolute">
+        <origin xyz="-0.006509599999999977 -0.020167399999999995 -0.004990610000000011" rpy="3.141592653589793 -5.2041704279304205e-18 0.0" />
+        <parent link="BASE-GRIP" />
+        <child link="GRIP1" />
+        <axis xyz="-0.034423 -0.010484999999999998 0.999352" />
+        <limit lower="0.0" upper="0.523599" effort="1000000" velocity="1000000" />
+    </joint>
+    <joint name="BASE-GRIP_Revolute-13" type="revolute">
+        <origin xyz="0.002231500000000004 0.008530920000000003 -0.004990610000000011" rpy="3.141592653589793 -5.2041704279304205e-18 0.0" />
+        <parent link="BASE-GRIP" />
+        <child link="GRIP2" />
+        <axis xyz="-0.034423 -0.010484999999999998 0.999352" />
+        <limit lower="-0.523599" upper="0.0" effort="1000000" velocity="1000000" />
+    </joint>
+    <joint name="link2_Rigid-14" type="fixed">
+        <origin xyz="0.00953249805719898 0.02189664999999998 0.1417532664158946" rpy="-1.5707963267948966 -1.2248511356561682 3.141592653589793" />
+        <parent link="link2" />
+        <child link="BASE-GRIP" />
+    </joint>
+</robot>
